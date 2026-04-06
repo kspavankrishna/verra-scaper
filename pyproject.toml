@@ -6,10 +6,18 @@
 
 [project]
 name = "web_scrapper"
-version = "0.0.1"
+version = "1.0.0"
 description = "A web scrapper for Verified Carbon Standard (VCS) projects"
 authors = [{name = "Yicheng", email="yicheng.wang.2023@gmail.com"}]
 readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "pandas>=1.5.0",
+    "selenium>=4.0.0",
+    "webdriver-manager>=3.8.0",
+    "loguru>=0.6.0",
+    "openpyxl>=3.9.0",
+]
 
 [tool.setuptools.packages.find]
 where = ["src"]  # list of folders that contain the packages (["."] by default)

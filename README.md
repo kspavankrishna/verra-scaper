@@ -1,83 +1,47 @@
 # Verra VCS Document Scraper
 
-## Table of Contents
+This tool scrapes document data from the Verra Verified Carbon Standard (VCS) Registry, pulling summaries, metadata, and PDF document links directly from project pages. If you work with carbon credits, this saves hours of manual data gathering from the registry.
 
-- [Verra VCS Document Scraper](#verra-vcs-document-scraper)
-  - [Table of Contents](#table-of-contents)
-  - [About ](#about-)
-  - [Features](#features)
-  - [Getting Started](#getting-started)
-    - [Installation](#installation)
-  - [Usage](#usage)
-    - [Quick Start](#quick-start)
-    - [Output](#output)
+You can explore the registry yourself at [Verra VCS Registry](https://registry.verra.org/app/search/VCS).
 
-## About <a name = "about"></a>
+## What It Does
 
-This project facilitates the extraction of document data from the Verra Verified Carbon Standard (VCS) Registry, an open database widely utilized by carbon credit traders. Leveraging Python, it offers a user-friendly interface for efficient data scraping, including summary data, metadata, and PDF documents from detailed VCS pages.
-
-Explore the Verra VCS Registry: [Verra VCS Registry](https://registry.verra.org/app/search/VCS)
-
-## Features
-- **Automated Scraping**: Effortlessly retrieves summary data, metadata, and direct PDF document links.
-- **User-Friendly**: Simple command-line interface for easy operation.
-- **Flexible**: Options to customize the scraping process according to your needs.
+The scraper automates the extraction of summary text and document information from VCS projects. It gives you a simple command-line interface to customize what you want to grab, whether that's just summaries, just document links, or both. It handles the browser automation, error recovery, and file management so you don't have to.
 
 ## Getting Started
 
-### Installation
+You'll need Taskfile installed on your system. [Taskfile](https://taskfile.dev) is a task runner that makes it easy to execute predefined tasks without remembering complex commands.
 
+Once you have Taskfile set up, install all dependencies by running:
 
-1. **Prerequisites**: Ensure you have Taskfile installed on your system as a prerequisite. [Taskfile](https://taskfile.dev) is a task runner / build tool that simplifies the execution of predefined tasks within a project.
+```bash
+task req-install
+```
 
-2. **Set Up Environment**: To configure your environment and install all necessary dependencies, execute the following command:
+## Using the Scraper
 
-    ```bash
-    task req-install
-    ```
+To run the full scrape of both summary data and PDF links, execute:
 
-## Usage
+```bash
+python3 src/main.py
+```
 
-### Quick Start
+If you only want summaries without the document links, pass the flag:
 
-1. **Launch the Scraper**: Start scraping by running the main script.
+```bash
+python3 src/main.py --disable-document
+```
 
-   ```bash
-   python3 src/main.py
-   ```
+If you only want the PDF links without summaries:
 
-   This initiates the scraping of both summary data and PDF document links.
+```bash
+python3 src/main.py --disable-summary
+```
 
-2. **Customize Your Scraping**:
+## What You Get
 
-   - To scrape only the summary data, use:
+Summary text files go into `results/summary` with filenames matching the project ID (like `33.txt` for project 33). All the document links, along with their metadata and last update dates, get compiled into a single CSV file called `pdf_links.csv` in the `results/` directory. You can use those CSV links to download documents directly.
 
-     ```bash
-     python3 src/main.py --disable-document
-     ```
-
-   - To obtain only PDF links, run:
-
-     ```bash
-     python3 src/main.py --disable-summary
-     ```
-
-
-
-### Output
-
-The scraper categorizes the data into two main types: Summary Data and PDF Links.
-
-- **Summary Data**: Extracted summary information is saved in `.txt` format in the `results/summary` directory. For instance, data for project ID 33 will be stored in `33.txt`.
-
-- **PDF Links**: Links to PDF documents, along with metadata such as the last update date and file names, are compiled into a CSV file named `pdf_links.csv` located in the `results/` directory. Access or download the documents directly via these links.
-
-To better understand what parts of the webpage are scraped for summary data and where the PDF documents are located, refer to the image below:
-
-![Verra VCS Registry Data Scraping Illustration](docs/assets/verra-scraper-demo.png)
-
-This image illustrates the specific sections of the Verra VCS Registry that the scraper targets for data extraction. The highlighted areas show where the summary information is located and which parts contain links to PDF documents.
-
-
+The image in `docs/assets/verra-scraper-demo.png` shows exactly which parts of the VCS registry page the scraper pulls from, so you know what data you're getting.
 
 ---
