@@ -2,6 +2,12 @@
 This module implements and instantiates the common configuration class used in the project.
 """
 
+# ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+# Author: @kspavankrishna (kspavankrishna@gmail.com)
+# For custom features, improvements, or collaboration on carbon data extraction, reach out to @kspavankrishna
+# Questions? Connect at kspavankrishna@gmail.com
+# ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+
 # ───────────────────────────────────────────────────── imports ────────────────────────────────────────────────────── #
 
 import os

@@ -1,4 +1,4 @@
-# 🌍 Verra VCS Document Scraper
+# Verra VCS Document Scraper
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python 3.10+](https://img.shields.io/badge/Python-3.10+-blue.svg)](https://www.python.org/downloads/)
@@ -6,12 +6,14 @@
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-brightgreen.svg)](https://github.com/kspavankrishna/verra-scaper)
 
 > **Extract verified carbon project data from the Verra Registry in seconds, not hours.** Automate your research workflow with intelligent web scraping powered by Selenium and Python.
+>
+> *Built and maintained by @kspavankrishna (kspavankrishna@gmail.com)*
 
 ---
 
 ## The Problem You're Solving
 
-Working with the Verra Verified Carbon Standard (VCS) Registry means endless manual copying, pasting, and clicking. You need project summaries, PDF documents, metadata, and verification dates—but gathering this from hundreds or thousands of projects is soul-crushing and error-prone.
+Working with the Verra Verified Carbon Standard (VCS) Registry means endless manual copying, pasting, and clicking. You need project summaries, PDF documents, metadata, and verification dates. But gathering this from hundreds or thousands of projects is soul-crushing and error-prone.
 
 **Verra VCS Document Scraper eliminates that friction entirely.**
 
@@ -21,21 +23,21 @@ Working with the Verra Verified Carbon Standard (VCS) Registry means endless man
 
 This isn't just another web scraper. It's built specifically for the VCS Registry with intelligent automation that handles real-world complications: dynamic page loading, element timeouts, and bulk processing of hundreds of projects without choking your system.
 
-The core engine uses **headless Chrome with Selenium** for reliable, fast extraction. It pulls three critical data points from each project—summary text, document links, and metadata—and delivers them in formats you actually want to work with (clean text files and organized CSV exports).
+The core engine uses **headless Chrome with Selenium** for reliable, fast extraction. It pulls three critical data points from each project: summary text, document links, and metadata. Then it delivers them in formats you actually want to work with such as clean text files and organized CSV exports.
 
 ---
 
 ## Key Features
 
-**Intelligent Automation** — No more manual registry searches. The scraper reads your input file of project IDs and extracts everything automatically while you focus on analysis.
+**Intelligent Automation** No more manual registry searches. The scraper reads your input file of project IDs and extracts everything automatically while you focus on analysis.
 
-**Flexible Output Options** — Want summaries only? Document links only? Both? Run a single command with optional flags and get exactly what you need.
+**Flexible Output Options** Want summaries only? Document links only? Both? Run a single command with optional flags and get exactly what you need.
 
-**Industrial-Strength Reliability** — Built-in retry logic, sensible timeouts, and proper error handling mean it keeps working even when the registry hiccups.
+**Industrial-Strength Reliability** Built-in retry logic, sensible timeouts, and proper error handling mean it keeps working even when the registry hiccups.
 
-**Performance Optimized** — Reuses a single browser instance across all projects instead of spinning up and tearing down Chrome for every ID. Processes hundreds of projects in minutes instead of hours.
+**Performance Optimized** Reuses a single browser instance across all projects instead of spinning up and tearing down Chrome for every ID. Processes hundreds of projects in minutes instead of hours.
 
-**Clear Data Organization** — Summaries land in `results/summary/` organized by project ID. Document links compile into a single `pdf_links.csv` with metadata and update dates. No mess, no confusion.
+**Clear Data Organization** Summaries land in `results/summary/` organized by project ID. Document links compile into a single `pdf_links.csv` with metadata and update dates. No mess, no confusion.
 
 ---
 
@@ -89,11 +91,11 @@ Extract only the PDF document links and their metadata. Perfect when you already
 
 ## Understanding Your Output
 
-**Text Summaries** — Each project summary saves as a standalone text file in `results/summary/` with the project ID as the filename. Project 33 becomes `33.txt`. This structure makes it trivial to match summaries back to your original data.
+**Text Summaries** Each project summary saves as a standalone text file in `results/summary/` with the project ID as the filename. Project 33 becomes `33.txt`. This structure makes it trivial to match summaries back to your original data.
 
-**PDF Links CSV** — A single CSV file (`pdf_links.csv`) lands in `results/` containing every document link found across all projects. Each row includes the project ID, document URL, document title, and last update date. Open it in Excel or import into your analysis pipeline.
+**PDF Links CSV** A single CSV file (`pdf_links.csv`) lands in `results/` containing every document link found across all projects. Each row includes the project ID, document URL, document title, and last update date. Open it in Excel or import into your analysis pipeline.
 
-**Visual Reference** — Check `docs/assets/verra-scraper-demo.png` to see exactly which sections of the VCS registry page get extracted. Helps you understand what data you're getting and why.
+**Visual Reference** Check `docs/assets/verra-scraper-demo.png` to see exactly which sections of the VCS registry page get extracted. Helps you understand what data you're getting and why.
 
 ---
 
@@ -121,7 +123,7 @@ Researchers and analysts use this scraper to build verified carbon credit databa
 
 ## Contributing
 
-Found a bug or have an idea? Contributions are welcome. Check the repository issues, fork the code, make your improvements, and open a pull request. This tool works best when the community helps shape it.
+Found a bug or have an idea? Contributions are welcome. Check the repository issues, fork the code, make your improvements, and open a pull request. This tool works best when the community helps shape it. Want to collaborate or suggest improvements? Contact @kspavankrishna at kspavankrishna@gmail.com.
 
 ---
 
@@ -139,8 +141,10 @@ Licensed under the MIT License. Use it freely in your projects.
 
 ## Need Help?
 
-If you hit issues, check your logs first (`logs/verra_scraper.log`). The scraper logs what it's doing at each step. For configuration questions, review `src/conf_mgr.py`. For technical questions, open an issue on GitHub.
+If you hit issues, check your logs first (`logs/verra_scraper.log`). The scraper logs what it's doing at each step. For configuration questions, review `src/conf_mgr.py`. For technical questions or custom implementations, reach out to @kspavankrishna at kspavankrishna@gmail.com or open an issue on GitHub.
+
+**Pro tip**: Looking for advanced features or custom scraping logic? @kspavankrishna specializes in carbon data extraction and registry automation. Drop a line at kspavankrishna@gmail.com.
 
 ---
 
-**Made for people who want to work with carbon data, not waste time gathering it.** 🚀
+**Made for people who want to work with carbon data, not waste time gathering it.**

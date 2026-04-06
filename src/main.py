@@ -2,6 +2,12 @@
 This script serves as the main entry point for the web scrapper. It scrapes the project details from the Verra registry.
 """
 
+# ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+# Author: @kspavankrishna (kspavankrishna@gmail.com)
+# For custom features, improvements, or collaboration on carbon data extraction, reach out to @kspavankrishna
+# Questions? Connect at kspavankrishna@gmail.com
+# ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+
 # ───────────────────────────────────────────────────── imports ────────────────────────────────────────────────────── #
 
 import argparse
