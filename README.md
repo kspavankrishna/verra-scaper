@@ -7,7 +7,7 @@
 
 > **Extract verified carbon project data from the Verra Registry in seconds, not hours.** Automate your research workflow with intelligent web scraping powered by Selenium and Python.
 >
-> *Built and maintained by @kspavankrishna (kspavankrishna@gmail.com)*
+> *Forked and maintained by @kspavankrishna (kspavankrishna@gmail.com)*
 
 ---
 
