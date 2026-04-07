@@ -135,8 +135,8 @@ Built on proven technologies: **Python 3.10+** for core logic, **Selenium 4.0+**
 
 ## License
 
-Licensed under the MIT License. Use it freely in your projects.
-
+ Apache-2.0 license
+ 
 ---
 
 ## Need Help?
